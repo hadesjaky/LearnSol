@@ -1,17 +1,18 @@
 require("@nomiclabs/hardhat-waffle");
 //require("nomiclabs/hardhat-etherscan");
 require('hardhat-abi-exporter');
-require("./task/greeter_task.js");
+//require("./task/greeter_task.js");
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
-task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
-  const accounts = await hre.ethers.getSigners();
 
-  for (const account of accounts) {
-    console.log(account.address);
-  }
-});
+// task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
+//   const accounts = await hre.ethers.getSigners();
+
+//   for (const account of accounts) {
+//     console.log(account.address);
+//   }
+// });
 
 const fs = require('fs');
 const mnemonic = fs.readFileSync("../.secret").toString().trim();
@@ -37,15 +38,15 @@ module.exports = {
       accounts:[mnemonic]
     }
   },
-  solidity: {
-      version: "0.8.4",
-      settings: {
+  solidity: {                                                               
+        version: "0.8.4",
+        settings: {
         optimizer: {
-          enabled: true,
-          runs: 200
-        }
-      }
-    },
+            enabled: true,
+            runs: 200
+          }
+    }
+  },
   abiExporter: {
     path: './deployments/abi',
     clear: true,

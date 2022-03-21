@@ -31,3 +31,6 @@
 *.out
 *.app
 .secret
+node_modules/
+cache/
+artifacts/
