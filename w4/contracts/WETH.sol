@@ -11,7 +11,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract WETH is ERC20, Ownable{
 
     constructor() ERC20("W ETH", "WETH"){
-        _mint(msg.sender, 10000);
+        _mint(msg.sender, 10000 * 10 **18);
     }
 
     function AddCurrency(uint256 _total) public onlyOwner{

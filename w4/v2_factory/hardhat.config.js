@@ -30,7 +30,7 @@ module.exports = {
     }
   },
   abiExporter: {
-    path: '../deployments/abi',
+    path: '../deployments/Factory/abi',
     clear: true,
     flat: true,
     only: [],

@@ -2,10 +2,6 @@ const { ethers } = require("hardhat");
 const hre = require("hardhat");
 const { writeAddr } = require('../../scripts/artifact_log.js');
 
-//const GBCTokenAddr = require(`../deployments/dev/GBCToken.json`)
-
-
-
 async function main() {
     let [owner, ] = await ethers.getSigners();
     
@@ -15,7 +11,7 @@ async function main() {
     await f.deployed();
 
     console.log("UniswapV2Factory address:", f.address);
-    await writeAddr(f.address, "UnisawpV2Factory", "dev");
+    await writeAddr(f.address, "UniswapV2Factory", "dev");
 
     let codeHash = await f.INIT_CODE_PAIR_HASH();
     console.log("UniswapV2Factory code hash: ", codeHash);

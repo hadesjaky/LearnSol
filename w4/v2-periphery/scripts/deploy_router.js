@@ -2,7 +2,7 @@ const { ethers } = require("hardhat");
 const hre = require("hardhat");
 const { writeAddr } = require('../../scripts/artifact_log.js');
 
-const factory = require(`../../deployments/dev/UnisawpV2Factory.json`);
+const factory = require(`../../deployments/dev/UniswapV2Factory.json`);
 const weth = require(`../../deployments/dev/WETH.json`);
 
 

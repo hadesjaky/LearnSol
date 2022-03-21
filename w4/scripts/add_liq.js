@@ -1,5 +1,8 @@
 const { ethers } = require("hardhat");
 
+const writeAddr = require("./artifact_log.js");
+const delay = ""
+
 const ERC20Addr = require(`../deployments/dev/GBCToken.json`)
 
 

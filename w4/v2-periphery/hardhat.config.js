@@ -13,6 +13,7 @@ module.exports = {
   defaultNetwork: "OKT",
   networks: {
     hardhat:{
+     
     },
     OKT: {
       url: "https://exchaintestrpc.okex.org",
