@@ -41,13 +41,13 @@ module.exports = {
       chainId: 31337
     },
     Kovan:{
-      url: `https://eth-kovan.alchemyapi.io/v2/${process.env.KOVAN_API_KEY}`,
+      url: `https://kovan.infura.io/v3/${process.env.KOVAN_API_KEY}`,
       chainId: 42,
       accounts:[mnemonic]
     }
   },
   solidity: {                                                               
-        version: "0.8.4",
+        version: "0.8.10",
         settings: {
         optimizer: {
             enabled: true,
